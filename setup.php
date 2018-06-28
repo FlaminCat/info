@@ -44,9 +44,6 @@ $sql = "CREATE TABLE `Заказ` (
   `id_клиента` INTEGER NOT NULL DEFAULT 0, 
   `id_товара` INTEGER NOT NULL DEFAULT 0, 
   `id_сотрудника` INTEGER NOT NULL DEFAULT 0, 
-  UNIQUE (`id_клиента`), 
-  UNIQUE (`id_сотрудника`), 
-  UNIQUE (`id_товара`), 
   PRIMARY KEY (`id_заказа`)
 )";
 if(mysqli_query($link, $sql)){
@@ -96,7 +93,7 @@ if(mysqli_query($link, $sql)){
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }
 
-$sql = "CREATE TABLE `Прайс-лист` (
+$sql = "CREATE TABLE `Прайс_лист` (
   `id_товара` INTEGER NOT NULL DEFAULT 0, 
   `Вид_товара` VARCHAR(255) NOT NULL, 
   `Название_товара` VARCHAR(255) NOT NULL, 
@@ -335,35 +332,35 @@ if (mysqli_query($link, $query)) {
 	echo "Error insert data: " . mysqli_error($link) . "<br>";
 }
 
-$query = "INSERT INTO `Прайс-лист` (`id_товара`, `Вид_товара`, `Название_товара`, `Цена_товара`) VALUES (1, 'Спальня', 'Кровать', 12340)";
+$query = "INSERT INTO `Прайс_лист` (`id_товара`, `Вид_товара`, `Название_товара`, `Цена_товара`) VALUES (1, 'Спальня', 'Кровать', 12340)";
 if (mysqli_query($link, $query)) {
 	echo "Данные добавлены<br>";
 } else {
 	echo "Error insert data: " . mysqli_error($link) . "<br>";
 }
 
-$query = "INSERT INTO `Прайс-лист` (`id_товара`, `Вид_товара`, `Название_товара`, `Цена_товара`) VALUES (2, 'Кухня', 'Стол', 2340)";
+$query = "INSERT INTO `Прайс_лист` (`id_товара`, `Вид_товара`, `Название_товара`, `Цена_товара`) VALUES (2, 'Кухня', 'Стол', 2340)";
 if (mysqli_query($link, $query)) {
 	echo "Данные добавлены<br>";
 } else {
 	echo "Error insert data: " . mysqli_error($link) . "<br>";
 }
 
-$query = "INSERT INTO `Прайс-лист` (`id_товара`, `Вид_товара`, `Название_товара`, `Цена_товара`) VALUES (3, 'Гостиная', 'Диван', 13460)";
+$query = "INSERT INTO `Прайс_лист` (`id_товара`, `Вид_товара`, `Название_товара`, `Цена_товара`) VALUES (3, 'Гостиная', 'Диван', 13460)";
 if (mysqli_query($link, $query)) {
 	echo "Данные добавлены<br>";
 } else {
 	echo "Error insert data: " . mysqli_error($link) . "<br>";
 }
 
-$query = "INSERT INTO `Прайс-лист` (`id_товара`, `Вид_товара`, `Название_товара`, `Цена_товара`) VALUES (4, 'Гостиная', 'Стол', 3670)";
+$query = "INSERT INTO `Прайс_лист` (`id_товара`, `Вид_товара`, `Название_товара`, `Цена_товара`) VALUES (4, 'Гостиная', 'Стол', 3670)";
 if (mysqli_query($link, $query)) {
 	echo "Данные добавлены<br>";
 } else {
 	echo "Error insert data: " . mysqli_error($link) . "<br>";
 }
 
-$query = "INSERT INTO `Прайс-лист` (`id_товара`, `Вид_товара`, `Название_товара`, `Цена_товара`) VALUES (5, 'Спальня', 'Кресло', 7980)";
+$query = "INSERT INTO `Прайс_лист` (`id_товара`, `Вид_товара`, `Название_товара`, `Цена_товара`) VALUES (5, 'Спальня', 'Кресло', 7980)";
 if (mysqli_query($link, $query)) {
 	echo "Данные добавлены<br>";
 } else {
